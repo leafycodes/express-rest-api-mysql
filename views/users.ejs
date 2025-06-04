@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All users</title>
+    <style>
+      table,
+      td,
+      th {
+        border: 1px solid black;
+        text-align: center;
+      }
+
+      td,
+      th {
+        padding: 0 10px;
+      }
+
+      table {
+        padding: 10px;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+        <div style="text-align: center;">
+          <p style="display: inline-block; vertical-align: middle;">Click on the username to edit it.</p>
+          <form style="display: inline-block;" action="/user/new" method="get">
+            <button style="border-radius: 5px; background-color: blue; color: white;">Register</button>
+        </div>
+</form>
+      <tr>
+        <th>Sl.</th>
+        <th>Username</th>
+        <th>Email</th>
+        <th>Id</th>
+      </tr>
+      <% for(let i=0;i<result.length;i++){ %>
+      <tr>
+        <td><%= i+1 %></td>
+        <td><a href="/user/<%= result[i].id %>/edit"><%= result[i].username %></a></td>
+        <td><%= result[i].email %></td>
+        <td><%= result[i].id %></td>
+        <td>
+          <form action="/user/<%= result[i].id %>/delete" method="get">
+            <button style="border-radius: 5px; background-color: red; color: white;">Delete</button>
+          </form>
+        </td>
+      </tr>
+      <%}%>
+    </table>
+  </body>
+</html>

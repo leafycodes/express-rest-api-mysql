@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create New User</title>
+  </head>
+  <body>
+    <h4>Rules to make an account:</h4>
+    <ul>
+      <li>The username must be unique.</li>
+      <li>The email must be unique.</li>
+      <li>Keep a strong password.</li>
+      <li>Everything must not be null.</li>
+    </ul>
+    <form action="/user" method="post">
+      <input name="username" placeholder="enter your username" required />
+      <input name="email" placeholder="enter your email" required />
+      <input
+        type="password"
+        name="password"
+        placeholder="enter password"
+        required
+      />
+      <button style="background-color: chartreuse; border-radius: 15px">
+        Join
+      </button>
+    </form>
+  </body>
+</html>
