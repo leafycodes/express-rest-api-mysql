@@ -24,13 +24,13 @@ This project is an API (MySQL, Express.js, Node.js) application with SQL and EJS
 
 1. Clone the repo:
    ```bash
-   git clone https://github.com/your-username/sql-mern.git
-   cd sql-mern
+   git clone https://github.com/leafycodes/express-rest-api-mysql.git
+   cd express-rest-api-mysql
    ```
 
 2. Install backend dependencies:
     ```bash
-    cd sql-mern
+    cd express-rest-api-mysql
     npm install
     ```
 3. Setup your MySQL database:
